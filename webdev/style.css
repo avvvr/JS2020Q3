@@ -16,16 +16,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    /*width: 1600px;*/
-    color: white;
-}
-
 .test {
     border: 1px solid red;
 }
@@ -78,6 +68,20 @@ header {
 
 .white-link {
     text-decoration: none;
+    color: white;
+}
+
+/**/
+/*-----------MAIN-----------*/
+/**/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /*width: 1600px;*/
     color: white;
 }
 
@@ -511,4 +515,44 @@ h2 {
     height: 46px;
 
     background-color: var(--dark-blue);
+}
+
+/**/
+/*-----------FOOTER-----------*/
+/**/
+
+footer{
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    height: 185px;
+
+    background-color: black;
+    color: white;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: flex-end;
+    width: 398px;
+
+    font-size: 14px;
+}
+
+.separator{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer-logo-box{
+    display: flex;
+    justify-content: center;
+    width: 874px;
+}
+
+.author{
+    width: 328px;
+    color: #818181;
 }
