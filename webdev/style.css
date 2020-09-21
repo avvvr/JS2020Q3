@@ -86,7 +86,7 @@ header {
     border-bottom: 2px solid white;
 }
 
-.logo:hover{
+.logo:hover {
     cursor: pointer;
 }
 
@@ -165,7 +165,7 @@ main {
     background-color: var(--blue);
 }
 
-.btn-main:hover{
+.btn-main:hover {
     background-color: var(--dark-blue);
 }
 
@@ -178,15 +178,15 @@ main {
     padding-bottom: 90px;
 }
 
-.links-box a svg{
+.links-box a svg {
     margin: 0 15px;
 }
 
-.links-box a:hover svg path{
+.links-box a:hover svg path {
     fill: var(--light-grey);
 }
 
-.links-box a:hover svg circle{
+.links-box a:hover svg circle {
     stroke: var(--light-grey);
 }
 
@@ -454,14 +454,14 @@ h2 {
     border: none;
 }
 
-.submit img{
+.submit img {
     width: 17px;
     height: 14px;
     transition-property: width, height;
     transition-duration: 0.1s;
 }
 
-.submit:hover img{
+.submit:hover img {
     width: 1.3rem;
     height: 1.3rem;
 }
@@ -528,9 +528,30 @@ h2 {
     background-color: var(--dark-blue);
 }
 
+.left-btn:hover .btn-content-right,
+.right-btn:hover .btn-content-right {
+    background-color: var(--dark-blue);
+}
+
 .left-btn:hover,
 .right-btn:hover {
     cursor: pointer;
+}
+
+.left-btn:hover img,
+.right-btn:hover img {
+    transition-property: width, height;
+    transition-duration: 0.1s;
+}
+
+.left-btn:hover:hover img {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.right-btn:hover:hover img {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .btn-content-left {
