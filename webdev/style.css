@@ -3,6 +3,7 @@
 :root {
     --blue: #00AFDB;
     --dark-blue: #009CC2;
+    /*--blue-hover: #02CAE5;*/
     --dark: #373737;
     --dark-grey: #4E4E4E;
     --light-greu: #B2B2B2;
@@ -162,6 +163,10 @@ main {
     color: inherit;
     border: none;
     background-color: var(--blue);
+}
+
+.btn-main:hover{
+    background-color: var(--dark-blue);
 }
 
 .links-box {
