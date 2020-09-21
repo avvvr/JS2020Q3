@@ -43,6 +43,7 @@ header {
 
 .nav {
     position: absolute;
+    margin-right: 45px;
 }
 
 .nav-list {
@@ -68,7 +69,7 @@ header {
 
 .nav-list li:nth-child(2),
 .nav-list li:nth-child(4) {
-    margin: 0 85px;
+    margin: 0 78px;
 }
 
 .nav-list li:nth-child(3) {
@@ -123,7 +124,7 @@ main {
 .your-life-heading {
     display: flex;
     align-items: flex-end;
-    margin-top: 230px;
+    margin-top: 231px;
 
     font-size: 64px;
     font-weight: bold;
@@ -138,7 +139,7 @@ main {
     justify-content: center;
 
     width: 460px;
-    margin-top: 20px;
+    margin-top: 22px;
     margin-bottom: 30px;
 
     font-size: 18px;
@@ -199,7 +200,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 1600px;
-    height: 744px;
+    height: 842px;
 }
 
 .left-rappresent {
@@ -211,10 +212,16 @@ main {
     /*margin-left: 2px;*/
 }
 
+.rappresent-content-box {
+    margin-bottom: 22px;
+    margin-left: 20px;
+}
+
 .right-rappresent {
     display: flex;
     align-items: flex-start;
     width: 676px;
+    margin-bottom: 20px;
 
 }
 
@@ -231,13 +238,16 @@ h2 {
 }
 
 .rappresent-text {
-    width: 466px;
+    width: 405px;
 
     color: var(--dark);
-    /*line-height: 1.4;*/
+
+    font-size: 14px;
+    line-height: 1.5;
+    /*letter-spacing: 0.3px;*/
 
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /**/
@@ -365,30 +375,36 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 1600px;
-    height: 744px;
+    height: 842px;
 }
 
 .left-implement {
-    width: 851px;
+    width: 780px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 139px;
     margin-bottom: 20px;
 }
 
 .right-implement {
-    width: 749px;
-    margin-bottom: 20px;
+    width: 835px;
+    margin-right: 200px;
+    margin-bottom: 16px;
+}
+
+.implement-content{
+    margin-left: 138px;
+    margin-bottom: 6px;
 }
 
 .implement-text {
-    width: 466px;
+    width: 405px;
+    font-size: 14px;
 
     color: var(--dark);
-    /*line-height: 1.4;*/
+    line-height: 1.4;
 
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /**/
@@ -620,6 +636,6 @@ footer {
     color: #818181;
 }
 
-.footer-links a{
+.footer-links a {
     cursor: pointer;
 }
