@@ -5,7 +5,8 @@
     --dark-blue: #009CC2;
     --dark: #373737;
     --dark-grey: #4E4E4E;
-    --light-greu: #B2B2B2; /*#7D7D7D;*/
+    --light-greu: #B2B2B2;
+    /*#7D7D7D;*/
 }
 
 * {
@@ -333,7 +334,7 @@ h2 {
     height: 744px;
 }
 
-.left-implement{
+.left-implement {
     width: 851px;
     display: flex;
     justify-content: flex-end;
@@ -341,12 +342,12 @@ h2 {
     margin-bottom: 20px;
 }
 
-.right-implement{
+.right-implement {
     width: 749px;
     margin-bottom: 20px;
 }
 
-.implement-text{
+.implement-text {
     width: 466px;
 
     color: var(--dark);
@@ -360,7 +361,7 @@ h2 {
 /*-----------SIGN UP-----------*/
 /**/
 
-.sign-up{
+.sign-up {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,28 +370,27 @@ h2 {
 
     background-image: url("./assets/bg-image-2.png");
     background-position: center;
-    /*color: white;*/
 }
 
-.form{
+.form {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
 }
 
-.form-header{
+.form-header {
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
 
-.email-box{
+.email-box {
     display: flex;
 }
 
-.email{
+.email {
     padding-left: 24px;
     width: 340px;
     height: 46px;
@@ -398,7 +398,7 @@ h2 {
     border: none;
 }
 
-.submit-box{
+.submit-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -406,18 +406,109 @@ h2 {
     height: 46px;
 }
 
-.submit{
+.submit {
     width: 66px;
     height: 46px;
 
-    /*background-image: url("./assets/check-icon.svg");   
-    background-repeat: no-repeat; /*Убираем повтор изображения*/   
     background-color: var(--blue);
     border: none;
 }
 
-.submit:hover{
+.submit:hover {
     cursor: pointer;
     background-color: var(--dark-blue);
     border: none;
+}
+
+/**/
+/*-----------DOWNLOAD-----------*/
+/**/
+
+.download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    height: 464px;
+
+    background-color: #F5F6F7;
+}
+
+.download-content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 164px;
+    margin-bottom: 60px;
+}
+
+.download-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark);
+
+}
+
+.download-text {
+    width: 550px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: var(--dark-grey);
+    text-align: center;
+}
+
+.btns-download-box {
+    display: flex;
+}
+
+.btn-download {
+    display: flex;
+    border: none;
+}
+
+.left-btn {
+    margin-right: 15px;
+}
+
+.right-btn {
+    margin-left: 15px;
+}
+
+.left-btn:hover .btn-content-left,
+.right-btn:hover .btn-content-left{
+    background-color: var(--dark-blue);
+}
+
+.left-btn:hover,
+.right-btn:hover{
+    cursor: pointer;
+}
+
+.btn-content-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 127px;
+    height: 46px;
+
+    background-color: var(--blue);
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.btn-content-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 46px;
+
+    background-color: var(--dark-blue);
 }
