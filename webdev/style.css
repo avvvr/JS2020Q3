@@ -2,10 +2,10 @@
 
 :root {
     --blue: #00AFDB;
+    --dark-blue: #009CC2;
     --dark: #373737;
     --dark-grey: #4E4E4E;
-    --light-greu: #B2B2B2;
-    /*#7D7D7D;*/
+    --light-greu: #B2B2B2; /*#7D7D7D;*/
 }
 
 * {
@@ -354,4 +354,70 @@ h2 {
 
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+/**/
+/*-----------SIGN UP-----------*/
+/**/
+
+.sign-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    height: 524px;
+
+    background-image: url("./assets/bg-image-2.png");
+    background-position: center;
+    /*color: white;*/
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-header{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.email-box{
+    display: flex;
+}
+
+.email{
+    padding-left: 24px;
+    width: 340px;
+    height: 46px;
+
+    border: none;
+}
+
+.submit-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 46px;
+}
+
+.submit{
+    width: 66px;
+    height: 46px;
+
+    /*background-image: url("./assets/check-icon.svg");   
+    background-repeat: no-repeat; /*Убираем повтор изображения*/   
+    background-color: var(--blue);
+    border: none;
+}
+
+.submit:hover{
+    cursor: pointer;
+    background-color: var(--dark-blue);
+    border: none;
 }
