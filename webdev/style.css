@@ -6,7 +6,7 @@
     /*--blue-hover: #02CAE5;*/
     --dark: #373737;
     --dark-grey: #4E4E4E;
-    --light-greu: #B2B2B2;
+    --light-grey: #B2B2B2;
     /*#7D7D7D;*/
 }
 
@@ -178,8 +178,16 @@ main {
     padding-bottom: 90px;
 }
 
-.icon-link {
-    padding: 0 15px;
+.links-box a svg{
+    margin: 0 15px;
+}
+
+.links-box a:hover svg path{
+    fill: var(--light-grey);
+}
+
+.links-box a:hover svg circle{
+    stroke: var(--light-grey);
 }
 
 /**/
