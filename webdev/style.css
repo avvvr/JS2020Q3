@@ -3,6 +3,8 @@
 :root {
     --blue: #00AFDB;
     --dark: #373737;
+    --dark-grey: #4E4E4E;
+    --light-greu: #B2B2B2; /*#7D7D7D;*/
 }
 
 * {
@@ -16,8 +18,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    width: 1600px;
+    /*width: 1600px;*/
     color: white;
 }
 
@@ -199,4 +202,120 @@ h2 {
 
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+/**/
+/*-----------OUR COMMUNITY-----------*/
+/**/
+
+.our-community {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    height: 504px;
+
+    background-color: #F5F6F7;
+}
+
+.left-community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 706px;
+}
+
+.citation-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-medium-h2 {
+    letter-spacing: 1px;
+    word-spacing: 1px;
+
+    color: var(--dark);
+    font-weight: bold;
+    /*сделать medium!!!*/
+    font-size: 16;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.community-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 340px;
+    color: var(--dark-grey);
+
+    text-align: center;
+    line-height: 1.4;
+}
+
+.right-community {
+    width: 894px;
+}
+
+.slider-btn-box {
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/ 
+    margin-bottom: 20px;
+    margin-left: 469px;
+
+    color: var(--dark);
+}
+
+.btn-arrow {
+    background-color: transparent;
+    border: none;
+}
+
+.arrow svg path:hover{
+    stroke: var(--dark-grey);
+    cursor: pointer;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.left-number-slider {
+    margin-left: 14px;
+    margin-right: 4px;
+    font-size: 18px;
+}
+
+.right-number-slider {
+    margin-left: 4px;
+    margin-right: 14px;
+    font-size: 18px;
+}
+
+.slider-img-box {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.middle-slider-img {
+    margin: 0 30px;
+}
+
+.cutted-img-box {
+    width: 20px;
+    height: 244px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cutted-img {
+    position: absolute;
+    margin-right: -387px
 }
