@@ -454,6 +454,18 @@ h2 {
     border: none;
 }
 
+.submit img{
+    width: 17px;
+    height: 14px;
+    transition-property: width, height;
+    transition-duration: 0.1s;
+}
+
+.submit:hover img{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
 /**/
 /*-----------DOWNLOAD-----------*/
 /**/
