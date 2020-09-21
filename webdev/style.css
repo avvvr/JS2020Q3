@@ -20,6 +20,13 @@
     border: 1px solid red;
 }
 
+.parent-of-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /**/
 /*-----------HEADER-----------*/
 /**/
@@ -29,13 +36,12 @@ header {
     justify-content: center;
 }
 
-.nav {
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
-    position: absolute;
+.webdev {
+    display: none;
+}
 
-    /*width: 100%;*/
+.nav {
+    position: absolute;
 }
 
 .nav-list {
@@ -45,7 +51,6 @@ header {
     list-style-type: none;
 
     margin-top: 25px;
-    /*padding: 0px;*/
 }
 
 .nav-list-element {
@@ -81,7 +86,6 @@ main {
     align-items: center;
     justify-content: center;
 
-    /*width: 1600px;*/
     color: white;
 }
 
@@ -482,12 +486,12 @@ h2 {
 }
 
 .left-btn:hover .btn-content-left,
-.right-btn:hover .btn-content-left{
+.right-btn:hover .btn-content-left {
     background-color: var(--dark-blue);
 }
 
 .left-btn:hover,
-.right-btn:hover{
+.right-btn:hover {
     cursor: pointer;
 }
 
@@ -521,7 +525,7 @@ h2 {
 /*-----------FOOTER-----------*/
 /**/
 
-footer{
+footer {
     display: flex;
     /*flex-direction: column;*/
     align-items: center;
@@ -533,7 +537,7 @@ footer{
     color: white;
 }
 
-.footer-links{
+.footer-links {
     display: flex;
     justify-content: flex-end;
     width: 398px;
@@ -541,18 +545,18 @@ footer{
     font-size: 14px;
 }
 
-.separator{
+.separator {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.footer-logo-box{
+.footer-logo-box {
     display: flex;
     justify-content: center;
     width: 874px;
 }
 
-.author{
+.author {
     width: 328px;
     color: #818181;
 }
