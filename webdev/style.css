@@ -4,7 +4,8 @@
     --blue: #00AFDB;
     --dark: #373737;
     --dark-grey: #4E4E4E;
-    --light-greu: #B2B2B2; /*#7D7D7D;*/
+    --light-greu: #B2B2B2;
+    /*#7D7D7D;*/
 }
 
 * {
@@ -265,7 +266,7 @@ h2 {
 .slider-btn-box {
     display: flex;
     /*justify-content: center;*/
-    /*align-items: center;*/ 
+    /*align-items: center;*/
     margin-bottom: 20px;
     margin-left: 469px;
 
@@ -277,12 +278,12 @@ h2 {
     border: none;
 }
 
-.arrow svg path:hover{
+.arrow svg path:hover {
     stroke: var(--dark-grey);
     cursor: pointer;
 }
 
-.arrow:hover{
+.arrow:hover {
     cursor: pointer;
 }
 
@@ -318,4 +319,39 @@ h2 {
 .cutted-img {
     position: absolute;
     margin-right: -387px
+}
+
+/**/
+/*-----------IMPLEMENT-----------*/
+/**/
+
+.implement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1600px;
+    height: 744px;
+}
+
+.left-implement{
+    width: 851px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 139px;
+    margin-bottom: 20px;
+}
+
+.right-implement{
+    width: 749px;
+    margin-bottom: 20px;
+}
+
+.implement-text{
+    width: 466px;
+
+    color: var(--dark);
+    /*line-height: 1.4;*/
+
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
