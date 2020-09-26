@@ -3,9 +3,7 @@ class Calculator {
     this.previousOperandBlock = previousOperandBlock; //хранит div
     this.currentOperandBlock = currentOperandBlock;
 
-    this.currentOperand = ''; //хранит число из div
-    this.previousOperand = '';
-    this.operation = undefined;
+    this.clear();
   }
 
   appendNumber(number) {
@@ -84,13 +82,6 @@ class Calculator {
       case 'x^y':
         computation = Math.pow(previous, current);
         break;
-        /*case '&sup2;&radic;x': {
-          if (previous < 0) {
-            this.previousOperandBlock.innerText = '';
-            this.currentOperandBlock.integerDigits = 'error';
-          }
-          break;
-        }*/
       default:
         return;
     }
@@ -98,6 +89,12 @@ class Calculator {
     this.currentOperand = computation;
     this.operation = undefined;
     this.previousOperand = '';
+  }
+
+  clear() {
+    this.currentOperand = ''; //хранит число из div
+    this.previousOperand = '';
+    this.operation = undefined;
   }
 }
 
@@ -127,5 +124,10 @@ operationButtons.forEach(button => {
 
 equalsButton.addEventListener('click', button => {
   calculator.compute();
+  calculator.updateDisplay();
+})
+
+clearAllButton.addEventListener('click', button => {
+  calculator.clear();
   calculator.updateDisplay();
 })
