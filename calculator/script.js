@@ -42,6 +42,18 @@ class Calculator {
   } //непосредственное обновление отображения
 
   chooseOperation(operation) {
+    if (operation === 'x') {
+      if (this.currentOperand < 0) {
+        this.currentOperand = '';
+        alert('error');
+        return;
+      }
+      const current = parseFloat(this.currentOperand);
+
+      this.currentOperand = Math.sqrt(current);
+      currentOperandBlock.innerText = this.currentOperand;
+      return;
+    }
     if (this.currentOperand === '') return;
     if (this.previousOperand !== '') this.compute();
     this.operation = operation;
@@ -72,16 +84,20 @@ class Calculator {
       case 'x^y':
         computation = Math.pow(previous, current);
         break;
-      case '&sup2;&radic;x': {
-        if (previous < 0) {
-          this.previousOperandBlock.innerText = '';
-          this.currentOperandBlock.integerDigits = 'error';
-        }
-      }
-      break;
-    default:
-      return;
+        /*case '&sup2;&radic;x': {
+          if (previous < 0) {
+            this.previousOperandBlock.innerText = '';
+            this.currentOperandBlock.integerDigits = 'error';
+          }
+          break;
+        }*/
+      default:
+        return;
     }
+
+    this.currentOperand = computation;
+    this.operation = undefined;
+    this.previousOperand = '';
   }
 }
 
@@ -107,4 +123,9 @@ operationButtons.forEach(button => {
     calculator.chooseOperation(button.innerText);
     calculator.updateDisplay();
   })
+})
+
+equalsButton.addEventListener('click', button => {
+  calculator.compute();
+  calculator.updateDisplay();
 })
