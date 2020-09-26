@@ -2,7 +2,7 @@ class Calculator {
   constructor(previousOperandBlock, currentOperandBlock) {
     this.previousOperandBlock = previousOperandBlock; //хранит div
     this.currentOperandBlock = currentOperandBlock;
-
+    this.readyToReset = false;
     this.clear();
   }
 
@@ -50,6 +50,7 @@ class Calculator {
 
       this.currentOperand = Math.sqrt(current);
       currentOperandBlock.innerText = this.currentOperand;
+      this.readyToReset = true;
       return;
     }
     if (this.currentOperand === '') return;
@@ -85,7 +86,7 @@ class Calculator {
       default:
         return;
     }
-
+    this.readyToReset = true;
     this.currentOperand = computation;
     this.operation = undefined;
     this.previousOperand = '';
@@ -113,7 +114,12 @@ const currentOperandBlock = document.querySelector('[data-current-operand]');
 const calculator = new Calculator(previousOperandBlock, currentOperandBlock);
 
 numberButtons.forEach(button => {
-  button.addEventListener("click", () => {
+  button.addEventListener('click', () => {
+    if (calculator.previousOperand === '' &&
+    calculator.currentOperand !== '' && calculator.readyToReset) {
+    calculator.currentOperand = '';
+    calculator.readyToReset = false;
+  }
     calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
   })
