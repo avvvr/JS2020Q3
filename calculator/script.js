@@ -40,6 +40,49 @@ class Calculator {
     }
 
   } //непосредственное обновление отображения
+
+  chooseOperation(operation) {
+    if (this.currentOperand === '') return;
+    if (this.previousOperand !== '') this.compute();
+    this.operation = operation;
+    this.previousOperand = this.currentOperand;
+    this.currentOperand = '';
+  }
+
+  compute() {
+    let computation;
+    const previous = parseFloat(this.previousOperand);
+    const current = parseFloat(this.currentOperand);
+
+    if (isNaN(previous) || isNaN(current)) return;
+
+    switch (this.operation) {
+      case '+':
+        computation = previous + current;
+        break;
+      case '-':
+        computation = previous - current;
+        break;
+      case '*':
+        computation = previous * current;
+        break;
+      case '÷':
+        computation = previous / current;
+        break;
+      case 'x^y':
+        computation = Math.pow(previous, current);
+        break;
+      case '&sup2;&radic;x': {
+        if (previous < 0) {
+          this.previousOperandBlock.innerText = '';
+          this.currentOperandBlock.integerDigits = 'error';
+        }
+      }
+      break;
+    default:
+      return;
+    }
+  }
 }
 
 const numberButtons = document.querySelectorAll('[data-number]');
@@ -55,6 +98,13 @@ const calculator = new Calculator(previousOperandBlock, currentOperandBlock);
 numberButtons.forEach(button => {
   button.addEventListener("click", () => {
     calculator.appendNumber(button.innerText);
+    calculator.updateDisplay();
+  })
+})
+
+operationButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    calculator.chooseOperation(button.innerText);
     calculator.updateDisplay();
   })
 })
