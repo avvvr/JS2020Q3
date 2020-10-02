@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,39 @@
   <link href="styles.css" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
+
 <body>
-  <div class="calculator-grid">
-    <div class="output">
-      <div data-previous-operand class="previous-operand"></div>
-      <div data-current-operand class="current-operand"></div>
+  <div class="main-block">
+    <div class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <button class="full" data-all-clear>AC</button>
+      <button class="full" data-delete>DEL</button>
+      <button class="full" data-operation>^</button>
+      <button class="full" data-operation>&Sqrt;</button>
+      <button class="full" data-number>1</button>
+      <button class="full" data-number>2</button>
+      <button class="full" data-number>3</button>
+      <button class="full" data-operation>÷</button>
+      <button class="full" data-number>4</button>
+      <button class="full" data-number>5</button>
+      <button class="full" data-number>6</button>
+      <button class="full" data-operation>*</button>
+      <button class="full" data-number>7</button>
+      <button class="full" data-number>8</button>
+      <button class="full" data-number>9</button>
+      <button class="full" data-operation>+</button>
+      <button class="half dot" data-number>.</button>
+      <button class="half plus-minus" data-negative>+/-</button>
+      <button class="full" data-number>0</button>
+      <button class="full" data-equals>=</button>
+      <button class="full" data-operation>-</button>
     </div>
-    <button data-all-clear>AC</button>
-    <button data-delete>DEL</button>
-    <button data-operation>x^y</button>
-    <button data-operation>x<!--&sup2;&radic;x--></button>
-    <button data-number>1</button>
-    <button data-number>2</button>
-    <button data-number>3</button>
-    <button data-operation>÷</button>
-    <button data-number>4</button>
-    <button data-number>5</button>
-    <button data-number>6</button>
-    <button data-operation>*</button>
-    <button data-number>7</button>
-    <button data-number>8</button>
-    <button data-number>9</button>
-    <button data-operation>+</button>
-    <button data-number>.</button>
-    <button data-number>0</button>
-    <button data-equals>=</button>
-    <button data-operation>-</button>
+
+    
   </div>
 </body>
+
 </html>

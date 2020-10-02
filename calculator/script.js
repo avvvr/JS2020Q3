@@ -3,6 +3,7 @@ class Calculator {
     this.previousOperandBlock = previousOperandBlock; //хранит div
     this.currentOperandBlock = currentOperandBlock;
     this.readyToReset = false;
+    //this.isPositive = true;
     this.clear();
   }
 
@@ -12,21 +13,9 @@ class Calculator {
   }
 
   getDisplayNumber(number) {
-    const stringNumber = number.toString();
-    const integerDigits = parseFloat(stringNumber.split('.')[0]); //целая часть
-    const decimalDigits = stringNumber.split('.')[1];
-    let integerDisplay; //дробная часть
+    return number.toString();
+  }
 
-    if (isNaN(integerDigits)) {
-      integerDisplay = ''; //если польз-ль ставит .1, отображается .1, а не 0.1
-    } else {
-      integerDisplay = integerDigits;
-    }
-
-    if (decimalDigits != null) {
-      return `${integerDisplay}.${decimalDigits}`;
-    } else return integerDisplay;
-  } //возвращает число в десятичном формате (?), с точкой при необходимости
 
   updateDisplay() {
     this.currentOperandBlock.innerText = this.getDisplayNumber(this.currentOperand);
@@ -40,10 +29,13 @@ class Calculator {
   } //непосредственное обновление отображения
 
   chooseOperation(operation) {
-    if (operation === 'x') {
+    if (operation === '\u221A') {
       if (this.currentOperand < 0) {
         this.currentOperand = '';
         alert('error');
+        return;
+      }
+      if (!this.currentOperand || this.currentOperand == '.') {
         return;
       }
       const current = parseFloat(this.currentOperand);
@@ -69,24 +61,25 @@ class Calculator {
 
     switch (this.operation) {
       case '+':
-        computation = previous + current;
+        computation = (previous * 100000000 + current * 100000000) / 100000000;
         break;
       case '-':
-        computation = previous - current;
+        computation = (previous * 100000000 - current * 100000000) / 100000000;
         break;
       case '*':
-        computation = previous * current;
+        computation = ((previous * 100000) * (current * 100000)) / 10000000000;
         break;
       case '÷':
-        computation = previous / current;
+        computation = ((previous * 100000) / (current * 100000));
         break;
-      case 'x^y':
+      case '^':
         computation = Math.pow(previous, current);
         break;
       default:
         return;
     }
     this.readyToReset = true;
+
     this.currentOperand = computation;
     this.operation = undefined;
     this.previousOperand = '';
@@ -99,7 +92,14 @@ class Calculator {
   }
 
   delete() {
-    this.currentOperand = this.currentOperand.toString().slice(0, -1);
+    this.currentOperand = this.currentOperand.toString().slice(1);
+  }
+
+  makeNegative() {
+    if (!this.currentOperand || this.currentOperand == '.') {
+      return;
+    }
+    this.currentOperand = (-parseFloat(this.currentOperand)).toString();
   }
 }
 
@@ -108,6 +108,7 @@ const operationButtons = document.querySelectorAll('[data-operation]');
 const clearAllButton = document.querySelector('[data-all-clear]');
 const deleteButton = document.querySelector('[data-delete]');
 const equalsButton = document.querySelector('[data-equals]');
+const makeNegativeButon = document.querySelector('[data-negative]');
 const previousOperandBlock = document.querySelector('[data-previous-operand]');
 const currentOperandBlock = document.querySelector('[data-current-operand]');
 
@@ -116,10 +117,10 @@ const calculator = new Calculator(previousOperandBlock, currentOperandBlock);
 numberButtons.forEach(button => {
   button.addEventListener('click', () => {
     if (calculator.previousOperand === '' &&
-    calculator.currentOperand !== '' && calculator.readyToReset) {
-    calculator.currentOperand = '';
-    calculator.readyToReset = false;
-  }
+      calculator.currentOperand !== '' && calculator.readyToReset) {
+      calculator.currentOperand = '';
+      calculator.readyToReset = false;
+    }
     calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
   })
@@ -134,6 +135,11 @@ operationButtons.forEach(button => {
 
 equalsButton.addEventListener('click', button => {
   calculator.compute();
+  calculator.updateDisplay();
+})
+
+makeNegativeButon.addEventListener('click', button => {
+  calculator.makeNegative();
   calculator.updateDisplay();
 })
 
