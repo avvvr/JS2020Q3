@@ -1,0 +1,43 @@
+.left-not-only {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 502px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    height: 322px;
+    max-width: 460px;
+  }
+
+}
+
+.not-only-header {
+  width: 310px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 44px;
+  color: $color-light-xl;
+}
+
+.not-only-text {
+  height: 72px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: $color-dark-s;
+}
+
+.right-not-only {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-height: 100%;
+  /*728px;*/
+  max-width: 698px;
+
+  & img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

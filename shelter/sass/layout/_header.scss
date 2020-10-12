@@ -4,6 +4,7 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  position: absolute;
 }
 
 .header-main-block {
@@ -24,25 +25,28 @@ header {
 
       & li {
         list-style: none;
-        & a{
+
+        & a {
           font-family: Arial, Helvetica, sans-serif;
           font-size: 15px;
           line-height: 160%;
           color: $color-dark-s;
         }
-        & a:active{
+
+        & a:active {
           border-bottom: 2px solid $color-primary;
           color: $color-light-s;
         }
 
-        & a:hover{
+        & a:hover {
           color: $color-light-s;
         }
       }
 
       & li:nth-child(1) {
         border-bottom: 2px solid $color-primary;
-        & a{
+
+        & a {
           color: $color-light-s;
         }
       }

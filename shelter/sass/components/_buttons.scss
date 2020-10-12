@@ -1,0 +1,19 @@
+.primary-btn {
+  height: 52px;
+
+  background-color: $color-primary;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: $color-dark-3xl;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.left-not-only div .primary-btn{
+  width: 207px;
+}

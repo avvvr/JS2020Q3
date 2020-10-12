@@ -1,0 +1,22 @@
+section {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.not-only-section {
+  background: url("../../assets/images/start-screen-gradient-background.png") no-repeat;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  & div {
+    display: inline-flex;
+    /*align-items: flex-end;*/
+    height: 908px;
+    max-width: 1200px;
+
+    border: 1px solid red;
+  }
+}
