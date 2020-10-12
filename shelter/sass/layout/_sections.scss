@@ -15,8 +15,26 @@ section {
     display: inline-flex;
     /*align-items: flex-end;*/
     height: 908px;
+    width: 100%;
     max-width: 1200px;
 
     border: 1px solid red;
+  }
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-xl;
+  height: 588px;
+
+  & div {
+    display: flex;
+    height: 408px;
+    width: 100%;
+    max-width: 1200px;
+
+    border: 1px solid greenyellow;
   }
 }
