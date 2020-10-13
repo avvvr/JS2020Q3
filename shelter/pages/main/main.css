@@ -522,7 +522,6 @@ section {
   height: 908px;
   width: 100%;
   max-width: 1200px;
-  border: 1px solid red;
 }
 
 .about-section {
@@ -536,7 +535,6 @@ section {
   height: 408px;
   width: 100%;
   max-width: 1200px;
-  border: 1px solid greenyellow;
 }
 
 .our-friends {
@@ -558,11 +556,19 @@ section {
 }
 .help div {
   display: flex;
-  /*flex-direction: column;
-  height: 431px;
+}
+
+.in-addition {
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  height: 464px;
+}
+.in-addition div {
+  display: flex;
+  /*height: 284px;
   width: 100%;
   max-width: 1200px;*/
-  border: 1px solid greenyellow;
 }
 
 /*not-only-section*/
@@ -703,6 +709,72 @@ section {
   justify-content: flex-end;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
+  color: #545454;
+}
+
+.donation-dog-box {
+  justify-content: flex-end;
+  max-width: 677px;
+  width: 100%;
+  padding-right: 30px;
+}
+
+.in-addition-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 523px;
+  height: 282px;
+  width: 100%;
+}
+.in-addition-content a {
+  background-color: #f1cdb3;
+  border-radius: 15px;
+}
+
+.in-addition-header {
+  width: 300px;
+  height: 90px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  color: #545454;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.in-addition-subheader {
+  width: 307px;
+  height: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  color: #545454;
+  /*text-align: center;
+  vertical-align: bottom;*/
+}
+
+.credit-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 349px;
+  height: 43px;
+}
+.credit-card picture {
+  margin-left: 15px;
+}
+.credit-card div {
+  margin-right: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #545454;
+}
+
+.in-addition-text {
+  max-width: 380px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-style: italic;
   color: #545454;
 }
 

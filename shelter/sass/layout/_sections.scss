@@ -17,7 +17,7 @@ section {
     width: 100%;
     max-width: 1200px;
 
-    border: 1px solid red;
+    //border: 1px solid red;
   }
 }
 
@@ -33,7 +33,7 @@ section {
     width: 100%;
     max-width: 1200px;
 
-    border: 1px solid greenyellow;
+    //border: 1px solid greenyellow;
   }
 }
 
@@ -61,5 +61,18 @@ section {
     display: flex;
 
     //border: 1px solid greenyellow;
+  }
+}
+
+.in-addition {
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-l;
+  height: 464px;
+
+  & div {
+    display: flex;
+
+    //border: 1px solid red;
   }
 }
