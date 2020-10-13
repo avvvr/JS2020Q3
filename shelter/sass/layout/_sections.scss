@@ -13,7 +13,6 @@ section {
 
   & div {
     display: inline-flex;
-    /*align-items: flex-end;*/
     height: 908px;
     width: 100%;
     max-width: 1200px;
@@ -36,5 +35,18 @@ section {
     max-width: 1200px;
 
     border: 1px solid greenyellow;
+  }
+}
+
+.our-friends {
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-light-l;
+  height: 877px;
+
+  & div {
+    display: flex;
+
+    //border: 1px solid red;
   }
 }

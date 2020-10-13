@@ -363,6 +363,74 @@ template {
   width: 207px;
 }
 
+.secondary-btn {
+  height: 52px;
+  background-color: transparent;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #292929;
+  border-radius: 50px;
+  border: 2px solid #f1cdb3;
+  outline: none;
+}
+.secondary-btn:hover {
+  cursor: pointer;
+}
+
+.slider-part div {
+  height: 82px;
+  justify-content: flex-start;
+}
+
+.our-friends-slider div button {
+  width: 52px;
+}
+
+.our-friends-slider-content div div button {
+  width: 187px;
+}
+
+.primary-btn-box button {
+  width: 261px;
+}
+
+.our-friends-slider {
+  align-items: center;
+  justify-content: space-between;
+  height: 555px;
+  width: 100%;
+  max-width: 1200px;
+}
+.our-friends-slider:nth-child(odd) {
+  max-width: 105px;
+}
+
+.our-friends-slider-content {
+  width: 100%;
+  max-width: 990px;
+  justify-content: space-between;
+}
+
+.slider-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 270px;
+  height: 435px;
+  background-color: #fafafa;
+}
+.slider-part div:nth-child(2) {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #545454;
+}
+.slider-part div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  max-width: 270px;
+  max-height: 270px;
+}
+
 header {
   width: 100vw;
   height: 120px;
@@ -451,7 +519,6 @@ section {
 }
 .not-only-section div {
   display: inline-flex;
-  /*align-items: flex-end;*/
   height: 908px;
   width: 100%;
   max-width: 1200px;
@@ -471,6 +538,16 @@ section {
   width: 100%;
   max-width: 1200px;
   border: 1px solid greenyellow;
+}
+
+.our-friends {
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  height: 877px;
+}
+.our-friends div {
+  display: flex;
 }
 
 /*not-only-section*/
@@ -550,5 +627,30 @@ section {
   font-size: 15px;
   color: #4c4c4c;
 }
+
+.our-friends-header-box {
+  align-items: flex-end;
+  width: 400px;
+  height: 170px;
+}
+
+.our-friends-header {
+  height: 90px;
+  width: 400px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  color: #545454;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+/*.our-friends-slider {
+  height: 555px;
+}*/
+.primary-btn-box {
+  height: 52px;
+}
+
+/**/
 
 /*# sourceMappingURL=main.css.map */

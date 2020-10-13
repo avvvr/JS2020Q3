@@ -85,3 +85,30 @@
   font-size: 15px;
   color: $color-dark-xl;
 }
+
+.our-friends-header-box {
+  align-items: flex-end;
+  width: 400px;
+  height: 170px;
+}
+
+.our-friends-header {
+  height: 90px;
+  width: 400px;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 35px;
+  color: $color-dark-l;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+/*.our-friends-slider {
+  height: 555px;
+}*/
+
+.primary-btn-box {
+  height: 52px;
+}
+
+/**/

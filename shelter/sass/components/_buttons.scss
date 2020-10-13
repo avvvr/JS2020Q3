@@ -9,11 +9,45 @@
   border: none;
   outline: none;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
 
-.left-not-only div .primary-btn{
+.left-not-only div .primary-btn {
   width: 207px;
+}
+
+.secondary-btn {
+  height: 52px;
+
+  background-color: transparent;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: $color-dark-3xl;
+  border-radius: 50px;
+  border: 2px solid $pink;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.slider-part div{
+  height: 82px;
+  justify-content: flex-start;
+}
+
+.our-friends-slider div button {
+  width: 52px;
+}
+
+.our-friends-slider-content div div button{
+  width: 187px;
+  
+}
+
+.primary-btn-box button{
+  width: 261px;
 }
