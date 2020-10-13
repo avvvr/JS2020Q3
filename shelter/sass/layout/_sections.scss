@@ -22,7 +22,6 @@ section {
 }
 
 .about-section {
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: $color-light-xl;
@@ -48,5 +47,19 @@ section {
     display: flex;
 
     //border: 1px solid red;
+  }
+}
+
+.help {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-xl;
+  height: 611px;
+
+  & div {
+    display: flex;
+
+    //border: 1px solid greenyellow;
   }
 }

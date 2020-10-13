@@ -103,12 +103,53 @@
   vertical-align: bottom;
 }
 
-/*.our-friends-slider {
-  height: 555px;
-}*/
-
 .primary-btn-box {
   height: 52px;
 }
 
-/**/
+.help-header-box {
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 150px;
+
+  vertical-align: top;
+}
+
+.help-header {
+  width: 308px;
+  height: 90px;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 35px;
+  color: $color-dark-l;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.help-conent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  row-gap: 55px;
+  max-width: 1026px;
+  width: 100%;
+  height: 281px;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 113px;
+
+    div {
+      display: flex;
+      justify-content: flex-end;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      color: $color-dark-l;
+    }
+  }
+}
