@@ -1,0 +1,62 @@
+footer {
+  display: flex;
+  //align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 350px;
+  background: url("../../assets/images/start-screen-gradient-background.png") no-repeat;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.footer-main-block {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+
+  //border: 1px solid red;
+}
+
+.footer-info-part {
+  display: flex;
+}
+
+.footer-contacts,
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 234px;
+}
+
+.footer-contacts {
+  max-width: 278px; //438
+}
+
+.footer-address {
+  max-width: 302px; //438
+}
+
+.footer-puppy {
+  max-width: 300px;
+  width: 100%;
+}
+
+.footer-header {
+  width: 270px;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 35px;
+  color: $color-light-xl;
+}
+
+.footer-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: $footer-pink;
+}

@@ -586,27 +586,17 @@ footer {
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-}
-
-.footer-info-part {
-  display: flex;
-}
-
-.footer-contacts,
-.footer-address {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 234px;
+  border: 1px solid red;
 }
 
 .footer-contacts {
   max-width: 278px;
+  width: 100%;
 }
 
-.footer-address {
+.footer-addres {
   max-width: 302px;
+  width: 100%;
 }
 
 .footer-puppy {
@@ -619,12 +609,7 @@ footer {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 35px;
   color: white;
-}
-
-.footer-text {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
-  color: #f1cdb3;
+  border: 1px solid yellow;
 }
 
 /*not-only-section*/
@@ -834,4 +819,4 @@ footer {
   color: #545454;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=css.map */

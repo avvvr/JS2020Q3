@@ -594,8 +594,6 @@ footer {
 
 .footer-contacts,
 .footer-address {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   height: 234px;
