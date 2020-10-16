@@ -578,9 +578,11 @@ section {
   align-items: center;
   background-color: #f6f6f6;
   height: 464px;
-}
-.in-addition div {
-  display: flex;
+  /*& div {
+    display: flex;
+
+    //border: 1px solid red;
+  }*/
 }
 
 footer {
@@ -905,11 +907,13 @@ footer {
   color: #545454;
 }
 
+/*in-addition-section*/
 .donation-dog-box {
   justify-content: flex-end;
-  max-width: 677px;
-  width: 100%;
-  padding-right: 30px;
+  align-items: flex-end;
+  max-width: 505px;
+  margin-bottom: 17px;
+  margin-right: 28px;
 }
 
 .in-addition-content {
@@ -917,58 +921,69 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  max-width: 523px;
+  max-width: 380px;
   height: 282px;
-  width: 100%;
+  margin-right: 1px;
+  margin-bottom: 20px;
 }
 .in-addition-content a {
   background-color: #f1cdb3;
-  border-radius: 15px;
+  border-radius: 10px;
+  margin-bottom: 1px;
 }
 
 .in-addition-header {
   width: 300px;
   height: 90px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-top: 2px;
+  font-family: Georgia, serif;
   font-size: 35px;
+  line-height: 129%;
+  letter-spacing: 0.06em;
   color: #545454;
-  text-align: center;
+  text-align: left;
   vertical-align: bottom;
 }
 
 .in-addition-subheader {
-  width: 307px;
+  width: 310px;
   height: 17px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, serif;
   font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
   color: #545454;
   /*text-align: center;
   vertical-align: bottom;*/
 }
 
 .credit-card {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 349px;
   height: 43px;
 }
 .credit-card picture {
+  margin-top: 3px;
   margin-left: 15px;
 }
 .credit-card div {
   margin-right: 15px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, serif;
   font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 
 .in-addition-text {
   max-width: 380px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Arial, serif;
   font-size: 12px;
+  line-height: 150%;
   font-style: italic;
-  color: #545454;
+  color: #b2b2b2;
 }
 
 /*# sourceMappingURL=main.css.map */
