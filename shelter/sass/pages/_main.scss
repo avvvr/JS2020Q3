@@ -216,8 +216,10 @@
   height: 90px;
   width: 400px;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, serif;
   font-size: 35px;
+  letter-spacing: 0.06em;
+  line-height: 130%;
   color: $color-dark-l;
   text-align: center;
   vertical-align: bottom;
@@ -225,7 +227,19 @@
 
 .primary-btn-box {
   height: 52px;
+  width: 261px;
+  margin-bottom: 100px;
 }
+
+.our-friends-slider .secondary-btn img{
+  margin-bottom: 2px;
+}
+
+
+//////////
+//////////
+//////////
+/*help-section*/
 
 .help-header-box {
   align-items: flex-start;

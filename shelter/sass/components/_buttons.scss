@@ -27,6 +27,9 @@
   background-color: transparent;
 
   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: $color-dark-3xl;
   border-radius: 50px;
   border: 2px solid $pink;
@@ -37,7 +40,7 @@
   }
 }
 
-.slider-part div{
+.slider-part div {
   height: 82px;
   justify-content: flex-start;
 }
@@ -46,11 +49,11 @@
   width: 52px;
 }
 
-.our-friends-slider-content div div button{
+.our-friends-slider-content div div button {
   width: 187px;
-  
+
 }
 
-.primary-btn-box button{
+.primary-btn-box button {
   width: 261px;
 }
