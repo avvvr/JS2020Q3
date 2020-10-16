@@ -116,7 +116,7 @@
 //////////
 /*.about-section*/
 
-.left-about {
+/*.left-about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +156,55 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   color: $color-dark-xl;
+}*/
+
+.about-content {
+  display: flex;
+  align-items: center;
+  height: 408px;
+  //width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
 }
+
+.left-about {
+  display: flex;
+  justify-content: flex-end;
+  width: 475px;
+  margin-right: 120px;
+}
+
+.right-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 605px;
+  height: 380px;
+}
+
+.about-header {
+  width: 370px;
+
+  font-family: Georgia, Times, serif;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+  color: $color-dark-l;
+}
+
+.about-text {
+  width: 430px;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 160%;
+  color: $color-dark-xl;
+}
+
+//////////
+//////////
+//////////
+/*.about-section*/
 
 .our-friends-header-box {
   align-items: flex-end;

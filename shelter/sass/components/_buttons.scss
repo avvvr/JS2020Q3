@@ -3,7 +3,10 @@
 
   background-color: $color-primary;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, Times, serif;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: $color-dark-3xl;
   border-radius: 50px;
   border: none;

@@ -349,7 +349,10 @@ template {
 .primary-btn {
   height: 52px;
   background-color: #f1cdb3;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, Times, serif;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: #292929;
   border-radius: 50px;
   border: none;
@@ -474,7 +477,7 @@ header h1 {
   margin-left: 36px;
 }
 .header-main-block nav div a:nth-child(4) {
-  margin-left: 38px;
+  margin-left: 36px;
 }
 .header-main-block nav div a:active {
   border-bottom: 4px solid #f1cdb3;
@@ -533,11 +536,14 @@ section {
   align-items: center;
   background-color: white;
   height: 588px;
-}
-.about-section div {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
+  /*div {
+    display: flex;
+    //height: 408px;
+    //width: 100%;
+    max-width: 1200px;
+
+    //border: 1px solid greenyellow;
+  }*/
 }
 
 .our-friends {
@@ -735,14 +741,15 @@ footer {
 }
 
 /*.about-section*/
-.left-about {
+/*.left-about {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 595px;
-}
-.left-about div {
-  max-width: 345px;
+
+  & div {
+    max-width: 345px;
+  }
 }
 
 .right-about {
@@ -751,20 +758,21 @@ footer {
   align-items: center;
   max-width: 605px;
   height: 380px;
-}
-.right-about div {
-  justify-content: space-between;
-  flex-direction: column;
-  max-width: 430px;
-  height: 380px;
+
+  & div {
+    justify-content:space-between;
+    flex-direction: column;
+    max-width: 430px;
+    height: 380px;
+  }
 }
 
 .about-header {
   display: flex;
   max-width: 370px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 35px;
-  color: #545454;
+  color: $color-dark-l;
 }
 
 .about-text {
@@ -772,9 +780,49 @@ footer {
   max-width: 430px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
+  color: $color-dark-xl;
+}*/
+.about-content {
+  display: flex;
+  align-items: center;
+  height: 408px;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.left-about {
+  display: flex;
+  justify-content: flex-end;
+  width: 475px;
+  margin-right: 120px;
+}
+
+.right-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 605px;
+  height: 380px;
+}
+
+.about-header {
+  width: 370px;
+  font-family: Georgia, Times, serif;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+  color: #545454;
+}
+
+.about-text {
+  width: 430px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 160%;
   color: #4c4c4c;
 }
 
+/*.about-section*/
 .our-friends-header-box {
   align-items: flex-end;
   width: 400px;
