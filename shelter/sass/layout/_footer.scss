@@ -24,6 +24,11 @@ footer {
 .footer-info-part {
   display: flex;
   align-items: center;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
 .footer-contacts,

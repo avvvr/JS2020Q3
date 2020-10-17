@@ -323,6 +323,12 @@
     background-color: $color-primary;
     border-radius: 10px;
     margin-bottom: 1px;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $color-primary-light;
+      background-color: $color-primary-light;
+    }
   }
 }
 
@@ -383,5 +389,5 @@
   font-size: 12px;
   line-height: 150%;
   font-style: italic;
-  color: #b2b2b2;//$color-dark-l; 
+  color: #b2b2b2; //$color-dark-l; 
 }

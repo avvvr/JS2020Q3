@@ -360,6 +360,7 @@ template {
 }
 .primary-btn:hover {
   cursor: pointer;
+  background-color: #fddcc4;
 }
 
 .left-not-only div .primary-btn {
@@ -380,6 +381,8 @@ template {
 }
 .secondary-btn:hover {
   cursor: pointer;
+  border-color: #fddcc4;
+  background-color: #fddcc4;
 }
 
 .slider-part div {
@@ -423,7 +426,12 @@ template {
   justify-content: space-between;
   width: 270px;
   height: 435px;
+  border-radius: 12px;
   background-color: #fafafa;
+}
+.slider-part:hover {
+  cursor: pointer;
+  background-color: white;
 }
 .slider-part div:nth-child(2) {
   font-family: Georgia, serif;
@@ -611,6 +619,10 @@ footer {
 .footer-info-part {
   display: flex;
   align-items: center;
+}
+.footer-info-part:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .footer-contacts,
@@ -941,6 +953,11 @@ footer {
   background-color: #f1cdb3;
   border-radius: 10px;
   margin-bottom: 1px;
+}
+.in-addition-content a:hover {
+  cursor: pointer;
+  border-color: #fddcc4;
+  background-color: #fddcc4;
 }
 
 .in-addition-header {
