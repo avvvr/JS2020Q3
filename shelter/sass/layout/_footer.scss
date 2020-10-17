@@ -1,8 +1,8 @@
 footer {
   display: flex;
-  //align-items: center;
+  align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 350px;
   background: url("../../assets/images/start-screen-gradient-background.png") no-repeat;
   -moz-background-size: 100%;
@@ -15,14 +15,15 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
-
-  //border: 1px solid red;
+  height: 350px;
 }
 
 .footer-info-part {
   display: flex;
+  align-items: center;
 }
 
 .footer-contacts,
@@ -30,8 +31,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  //width: 100%;
   height: 234px;
+  margin-bottom: 57px;
 }
 
 .footer-contacts {
@@ -43,20 +45,28 @@ footer {
 }
 
 .footer-puppy {
+  justify-content: flex-end;
   max-width: 300px;
   width: 100%;
+  height: 310px;
 }
 
 .footer-header {
-  width: 270px;
+  width: 280px;
 
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
   color: $color-light-xl;
 }
 
 .footer-text {
+  margin-left: 20px;
+
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
   color: $footer-pink;
 }
