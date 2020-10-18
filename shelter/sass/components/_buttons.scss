@@ -43,6 +43,10 @@
   }
 }
 
+.pets_slider-content .secondary-btn{
+  width: 187px;
+}
+
 .slider-part div {
   height: 82px;
   justify-content: flex-start;
@@ -59,4 +63,17 @@
 
 .primary-btn-box button {
   width: 261px;
+}
+
+.btn-inactive{
+  background-color: transparent;
+  border: 1px solid $color-dark-s;
+  border-radius: 50px;
+}
+
+.pets_btn-block {
+  button {
+    width: 52px;
+    height: 52px;
+  }
 }

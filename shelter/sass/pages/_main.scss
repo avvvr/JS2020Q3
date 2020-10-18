@@ -1,59 +1,47 @@
-/*not-only-section*/
-
-/*.left-not-only {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: 502px;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    //height: 321px;
-    max-width: 460px;
-  }
-}
-
-.content{
-  margin-top: 99px;
-}
-
-.not-only-header {
-  //display: flex;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 44px;
-  line-height: 130%;
-  color: $color-light-xl;
-
-  div {
-    max-width: 310px;
-    height: 114px;
-  }
-}
-
-.not-only-text {
-  width: 460px;
-  height: 72px;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 160%;
-  color: $color-dark-s;
-}
-
-.not-only-btn {
-  justify-content: flex-end;
-  height: 52px;
-}
-
-.right-not-only {
-  display: flex;
-  justify-content: center;
+/*header*/
+header {
   align-items: flex-end;
-  max-width: 698px;
-}*/
+  position: absolute;
+}
 
+.header-main-block {
+
+  nav {
+    div {
+
+      a {
+        color: $color-dark-s;
+
+        &:nth-child(1) {
+          border-bottom: 4px solid $color-primary;
+          color: $color-light-s;
+        }
+
+        &:active {
+          border-bottom: 4px solid $color-primary;
+          color: $color-light-s;
+        }
+
+        &:hover {
+          color: $color-light-s;
+        }
+      }
+    }
+  }
+}
+
+.logo-block {
+
+  & div:nth-child(1) {
+    color: $color-primary;
+  }
+
+  & div:nth-child(2) {
+    color: $color-light-xl;
+  }
+}
+
+/*not-only-section*/
 
 .not-only-content {
   display: flex;
@@ -115,48 +103,6 @@
 //////////
 //////////
 /*.about-section*/
-
-/*.left-about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 595px;
-
-  & div {
-    max-width: 345px;
-  }
-}
-
-.right-about {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  max-width: 605px;
-  height: 380px;
-
-  & div {
-    justify-content:space-between;
-    flex-direction: column;
-    max-width: 430px;
-    height: 380px;
-  }
-}
-
-.about-header {
-  display: flex;
-  max-width: 370px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 35px;
-  color: $color-dark-l;
-}
-
-.about-text {
-  display: flex;
-  max-width: 430px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  color: $color-dark-xl;
-}*/
 
 .about-content {
   display: flex;

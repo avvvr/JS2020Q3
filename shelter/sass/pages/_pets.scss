@@ -1,0 +1,84 @@
+/*header*/
+
+header {
+  align-items: center;
+  height: 120px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: $color-light-xl;
+}
+
+.header-main-block {
+
+  nav {
+    div {
+
+      a {
+        color: $color-dark-l;
+
+        &:nth-child(2) {
+          border-bottom: 4px solid $color-primary;
+          color: $color-dark-3xl;
+        }
+
+        &:active {
+          border-bottom: 4px solid $color-primary;
+          color: $color-dark-3xl;
+        }
+
+        &:hover {
+          color: $color-dark-3xl;
+        }
+      }
+    }
+  }
+}
+
+.logo-block {
+
+  & div:nth-child(1) {
+    color: $color-dark-l;
+  }
+
+  & div:nth-child(2) {
+    color: $color-dark-3xl;
+  }
+}
+
+/*Our Friends*/
+
+.pets_container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 1162px;
+  margin-bottom: 20px;
+}
+
+.our-friends-header-box {
+  align-items: flex-end;
+  width: 400px;
+  height: 90px;
+}
+
+.our-friends-header {
+  height: 90px;
+  width: 400px;
+
+  font-family: Georgia, serif;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+  color: $color-dark-l;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.pets_btn-block{
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+  height: 52px;
+}
