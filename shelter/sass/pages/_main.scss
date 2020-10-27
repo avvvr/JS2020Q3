@@ -17,12 +17,12 @@ header {
           color: $color-light-s;
         }
 
-        &:active {
+        /*&:active {
           border-bottom: 4px solid $color-primary;
           color: $color-light-s;
-        }
+        }*/
 
-        &:hover {
+        &:nth-child(2):hover {
           color: $color-light-s;
         }
       }

@@ -22,12 +22,12 @@ header {
           color: $color-dark-3xl;
         }
 
-        &:active {
+        /*&:active {
           border-bottom: 4px solid $color-primary;
           color: $color-dark-3xl;
-        }
+        }*/
 
-        &:hover {
+        &:nth-child(1):hover {
           color: $color-dark-3xl;
         }
       }

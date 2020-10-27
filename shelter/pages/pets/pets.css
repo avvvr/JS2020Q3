@@ -447,6 +447,7 @@ template {
 .slider-part:hover {
   cursor: pointer;
   background-color: white;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
 }
 .slider-part div:nth-child(2) {
   font-family: Georgia, serif;
@@ -510,6 +511,9 @@ header h1 {
 }
 .header-main-block nav div a:nth-child(4) {
   margin-left: 36px;
+}
+.header-main-block nav div a:nth-child(3):hover, .header-main-block nav div a:nth-child(4):hover {
+  cursor: default;
 }
 
 .logo-block {
@@ -678,16 +682,16 @@ header {
 
 .header-main-block nav div a {
   color: #545454;
+  /*&:active {
+    border-bottom: 4px solid $color-primary;
+    color: $color-dark-3xl;
+  }*/
 }
 .header-main-block nav div a:nth-child(2) {
   border-bottom: 4px solid #f1cdb3;
   color: #292929;
 }
-.header-main-block nav div a:active {
-  border-bottom: 4px solid #f1cdb3;
-  color: #292929;
-}
-.header-main-block nav div a:hover {
+.header-main-block nav div a:nth-child(1):hover {
   color: #292929;
 }
 
