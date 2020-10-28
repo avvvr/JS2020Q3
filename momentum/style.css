@@ -15,7 +15,7 @@ body {
   background-size: cover;
   color: #fff;
 
-  transition: background-image 2s ease;
+  transition: background-image 1s ease;
 }
 
 body:after {
@@ -27,8 +27,6 @@ body:after {
   bottom: 0;
   background: rgba(0, 0, 0, .3);
   z-index: -1;
-
-  //transition: background-image 1s 0.5s ease-in-out;
 }
 
 
@@ -73,4 +71,42 @@ button:hover{
   cursor: pointer;
   border: none;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.quote, .weather {
+  font: 2rem Georgia, serif;
+  margin: 0;
+  background: rgba(238, 238, 238, 0.315);
+  padding: 1em;
+  /*border-radius: 1em;*/
+}
+.quote figcaption,
+.quote blockquote {
+  margin: 1em;
+}
+.quote figcaption {
+  text-align: right;
+}
+
+.change-quote-btn{
+  font: 1.75rem Georgia, serif;
+}
+.weather{
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-icon{
+  font-size: 150px;
+}
+
+.temperature,
+.city {
+  font-size: 50px;
+}
+
+.city{
+  margin-bottom: 25px;
 }

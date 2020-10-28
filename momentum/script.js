@@ -3,10 +3,22 @@ const time = document.querySelector('.time'),
   greeting = document.querySelector('.greeting'),
   name = document.querySelector('.name'),
   focus = document.querySelector('.focus'),
-  leftArrow = document.querySelector('.load-previous-bg-btn'),
-  rightArrow = document.querySelector('.load-next-bg-btn');
+  city = document.querySelector('.city');
 
-let currentName, currentFocus, currentNumber = 0;
+const leftArrow = document.querySelector('.load-previous-bg-btn'),
+  rightArrow = document.querySelector('.load-next-bg-btn'),
+  blockquote = document.querySelector('blockquote'),
+  figcaption = document.querySelector('figcaption'),
+  changeQuoteBtn = document.querySelector('.change-quote-btn'),
+  weatherIcon = document.querySelector('.weather-icon'),
+  temperature = document.querySelector('.temperature'),
+  humidity = document.querySelector('.humidity'),
+  wind = document.querySelector('.wind');
+
+let currentName,
+  currentFocus,
+  currentNumber = 0,
+  currentCity;
 currentShift = new Date().getHours();
 
 let numbersArray = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]);
@@ -20,6 +32,64 @@ function shuffle(a) {
     a[j] = x;
   }
   return a;
+}
+
+async function getQuote() {
+  console.log('getQuote');
+  const url = `https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru`;
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data.quoteText);
+  console.log(data.quoteAuthor);
+  blockquote.textContent = data.quoteText;
+  figcaption.textContent = data.quoteAuthor;
+}
+
+function setWeather(e) {
+  if (e.type === 'focus') {
+    currentCity = localStorage.getItem('city');
+    e.target.innerText = " ";
+  } else if (e.type === 'keypress') {
+    // Make sure enter is pressed
+    if (e.code === 'Enter') {
+      localStorage.setItem('city', e.target.innerText);
+      getWeather();
+      city.blur();
+    }
+  } else if (e.type === 'blur') {
+    //if (e.code === 'Enter') {
+      getWeather();
+      //city.blur();
+
+      if (e.target.innerText.trim() == "") {
+        e.target.innerText = currentCity;
+        localStorage.setItem('city', currentCity);
+      } else
+        localStorage.setItem('city', e.target.innerText);
+    //}
+  }
+}
+
+async function getWeather() {
+  if (localStorage.getItem('city') === null) {
+    //currentCity = '[Введите город]';
+    //localStorage.setItem('city', ccurrentCity);
+    city.textContent = '[Введите город]';
+  } else {
+    city.textContent = localStorage.getItem('city');
+    currentCity = localStorage.getItem('city');
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.textContent}&lang=ru&appid=1ab1020e879cd274413cb91921dd97be&units=metric`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    weatherIcon.className = 'weather-icon owf';
+    weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+    temperature.textContent = `${data.main.temp} ℃`;
+    humidity.textContent = `Влажность: ${data.main.humidity}%`;
+    wind.textContent = `Ветер: ${data.wind.speed} м/с`;
+
+    console.log(data.weather[0].id, data.weather[0].description, data.main.temp);
+  }
 }
 
 // Show Time
@@ -80,6 +150,14 @@ function addZero(n) {
 }
 
 function loadPreviousBg() {
+  leftArrow.disabled = true;
+  setTimeout(function () {
+    leftArrow.disabled = false
+  }, 1000);
+  rightArrow.disabled = true;
+  setTimeout(function () {
+    rightArrow.disabled = false
+  }, 1000);
   let today = new Date(),
     hour = today.getHours();
 
@@ -119,6 +197,14 @@ function loadPreviousBg() {
 }
 
 function loadNextBg() {
+  leftArrow.disabled = true;
+  setTimeout(function () {
+    leftArrow.disabled = false
+  }, 1000);
+  rightArrow.disabled = true;
+  setTimeout(function () {
+    rightArrow.disabled = false
+  }, 1000);
   let today = new Date(),
     hour = today.getHours();
   const img = document.createElement('img');
@@ -164,23 +250,23 @@ function setBgGreet() {
 
   if (hour >= 6 && hour < 12) {
     // Morning
-    greeting.textContent = 'Good Morning, ';
+    greeting.textContent = 'Доброе утро, ';
     document.body.style.backgroundImage = `url('assets/images/morning/${numbersArray[hour-1]}.jpg')`;
 
   } else if (hour >= 12 && hour < 18) {
     // Afternoon
-    greeting.textContent = 'Good Afternoon, ';
+    greeting.textContent = 'Доброго дня, ';
     document.body.style.backgroundImage = `url('assets/images/day/${numbersArray[hour-1]}.jpg')`;
 
   } else if (hour >= 18 && hour < 24) {
     // Evening
-    greeting.textContent = 'Good Evening, ';
+    greeting.textContent = 'Доброго вечера, ';
     document.body.style.color = 'white';
     document.body.style.backgroundImage = `url('assets/images/evening/${numbersArray[hour-1]}.jpg')`;
 
   } else if (hour = 24 || (hour > 0 && hour < 6)) {
     // Night
-    greeting.textContent = 'Good Night, ';
+    greeting.textContent = 'Доброй ночи, ';
     document.body.style.color = 'white';
     document.body.style.backgroundImage = `url('assets/images/night/${numbersArray[hour-1]}.jpg')`;
   }
@@ -189,9 +275,9 @@ function setBgGreet() {
 // Get Name
 function getName() {
   if (localStorage.getItem('name') === null) {
-    currentName = '[Enter Name]';
+    currentName = '[Введите Имя]';
     localStorage.setItem('name', currentName);
-    name.textContent = '[Enter Name]';
+    name.textContent = '[Введите Имя]';
   } else {
     name.textContent = localStorage.getItem('name');
   }
@@ -221,9 +307,9 @@ function setName(e) {
 function getFocus() {
   //alert('help');
   if (localStorage.getItem('focus') === null) {
-    currentFocus = '[Enter Focus]';
+    currentFocus = '[Введите цель]';
     localStorage.setItem('focus', currentFocus);
-    focus.textContent = '[Enter Focus]';
+    focus.textContent = '[Введите цель]';
   } else {
     focus.textContent = localStorage.getItem('focus');
   }
@@ -255,12 +341,22 @@ showDate();
 setBgGreet();
 getName();
 getFocus();
+getWeather();
 
 name.addEventListener('focus', setName);
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
+
 focus.addEventListener('focus', setFocus);
 focus.addEventListener('keypress', setFocus);
 focus.addEventListener('blur', setFocus);
+
+city.addEventListener('focus', setWeather);
+city.addEventListener('keypress', setWeather);
+city.addEventListener('blur', setWeather);
+document.addEventListener('DOMContentLoaded', setWeather);
+
 leftArrow.addEventListener('click', loadPreviousBg);
 rightArrow.addEventListener('click', loadNextBg);
+document.addEventListener('DOMContentLoaded', getQuote);
+changeQuoteBtn.addEventListener('click', getQuote);
