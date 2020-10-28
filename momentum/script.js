@@ -74,7 +74,7 @@ async function getWeather() {
   if (localStorage.getItem('city') === null) {
     //currentCity = '[Введите город]';
     //localStorage.setItem('city', ccurrentCity);
-    city.textContent = '[Введите город]';
+    city.textContent = '[Ваш город]';
   } else {
     city.textContent = localStorage.getItem('city');
     currentCity = localStorage.getItem('city');
@@ -275,9 +275,9 @@ function setBgGreet() {
 // Get Name
 function getName() {
   if (localStorage.getItem('name') === null) {
-    currentName = '[Введите Имя]';
+    currentName = '[Ваше Имя]';
     localStorage.setItem('name', currentName);
-    name.textContent = '[Введите Имя]';
+    name.textContent = '[Ваше Имя]';
   } else {
     name.textContent = localStorage.getItem('name');
   }
@@ -307,9 +307,9 @@ function setName(e) {
 function getFocus() {
   //alert('help');
   if (localStorage.getItem('focus') === null) {
-    currentFocus = '[Введите цель]';
+    currentFocus = '[Ваша цель]';
     localStorage.setItem('focus', currentFocus);
-    focus.textContent = '[Введите цель]';
+    focus.textContent = '[Ваша цель]';
   } else {
     focus.textContent = localStorage.getItem('focus');
   }
