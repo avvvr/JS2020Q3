@@ -99,7 +99,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .part2 {
@@ -107,7 +107,7 @@ button:hover {
 }
 
 .weather-icon {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .temperature,
@@ -116,7 +116,7 @@ button:hover {
 }
 
 .city {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 
@@ -151,14 +151,13 @@ button:hover {
     margin: 0.5rem 1rem;
     background-color: transparent;
     border: transparent;
-    color: rgba(175, 56, 56);
-    transition: color 1s ease;
+    color: rgba(255, 255, 255, 0.575);
   }
 
   button:hover {
     cursor: pointer;
-    border: red;
-    color: rgba(68, 90, 219, 0.9);
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
   }
 
   .quote,
@@ -170,7 +169,7 @@ button:hover {
   }
 
   .quote {
-    width: 20rem;
+    width: 15rem;
   }
 
   .quote figcaption {
