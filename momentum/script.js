@@ -58,22 +58,22 @@ function setWeather(e) {
     }
   } else if (e.type === 'blur') {
     //if (e.code === 'Enter') {
-      getWeather();
-      //city.blur();
+    //city.blur();
 
-      if (e.target.innerText.trim() == "") {
-        e.target.innerText = currentCity;
-        localStorage.setItem('city', currentCity);
-      } else
-        localStorage.setItem('city', e.target.innerText);
+    if (e.target.innerText.trim() == "") {
+      e.target.innerText = currentCity;
+      localStorage.setItem('city', currentCity);
+    } else
+      localStorage.setItem('city', e.target.innerText);
     //}
+    getWeather();
   }
 }
 
 async function getWeather() {
   if (localStorage.getItem('city') === null) {
-    //currentCity = '[Введите город]';
-    //localStorage.setItem('city', ccurrentCity);
+    currentCity = '[Введите город]';
+    localStorage.setItem('city', ccurrentCity);
     city.textContent = '[Ваш город]';
   } else {
     city.textContent = localStorage.getItem('city');
