@@ -82,6 +82,10 @@ async function getWeather() {
     const res = await fetch(url);
     const data = await res.json();
 
+    if(data.message=='city not found'){
+      alert('Город не найден.\nВведите другой.');
+    }
+
     weatherIcon.className = 'weather-icon owf';
     weatherIcon.classList.add(`owf-${data.weather[0].id}`);
     temperature.textContent = `${data.main.temp} ℃`;
