@@ -162,33 +162,33 @@ function loadPreviousBg() {
   setTimeout(function () {
     rightArrow.disabled = false
   }, 1000);
-  let today = new Date(),
-    hour = today.getHours();
+  //let today = new Date(),
+    //hour = today.getHours();
 
   const img = document.createElement('img');
   if (currentShift > 1) {
     currentShift--;
-    if (hour >= 6 && hour < 12) {
+    if (currentShift >= 6 && currentShift < 12) {
       const src = `assets/images/morning/${numbersArray[currentShift-1]}.jpg`;
       img.src = src;
       img.onload = () => {
         document.body.style.backgroundImage = `url('${src}')`;
       };
-    } else if (hour >= 12 && hour < 18) {
+    } else if (currentShift >= 12 && currentShift < 18) {
       const src = `assets/images/day/${numbersArray[currentShift-1]}.jpg`;
       img.src = src;
       img.onload = () => {
         document.body.style.backgroundImage = `url('${src}')`;
       };
 
-    } else if (hour >= 18 && hour < 24) {
+    } else if (currentShift >= 18 && currentShift < 24) {
       const src = `assets/images/evening/${numbersArray[currentShift-1]}.jpg`;
       img.src = src;
       img.onload = () => {
         document.body.style.backgroundImage = `url('${src}')`;
       };
 
-    } else if (hour = 24 || (hour > 0 && hour < 6)) {
+    } else if (currentShift == 24 || (currentShift > 0 && currentShift < 6)) {
       if (currentShift == 0)
         currentShift = 24;
       const src = `assets/images/night/${numbersArray[currentShift-1]}.jpg`;
@@ -214,25 +214,25 @@ function loadNextBg() {
   const img = document.createElement('img');
   if (currentShift < 24) {
     currentShift++;
-    if (hour >= 6 && hour < 12) {
+    if (currentShift >= 6 && currentShift < 12) {
       const src = `assets/images/morning/${numbersArray[currentShift-1]}.jpg`;
       img.src = src;
       img.onload = () => {
         document.body.style.backgroundImage = `url('${src}')`;
       };
-    } else if (hour >= 12 && hour < 18) {
+    } else if (currentShift >= 12 && currentShift < 18) {
       const src = `assets/images/day/${numbersArray[currentShift-1]}.jpg`;
       img.src = src;
       img.onload = () => {
         document.body.style.backgroundImage = `url('${src}')`;
       };
-    } else if (hour >= 18 && hour < 24) {
+    } else if (currentShift >= 18 && currentShift < 24) {
       const src = `assets/images/evening/${numbersArray[currentShift-1]}.jpg`;
       img.src = src;
       img.onload = () => {
         document.body.style.backgroundImage = `url('${src}')`;
       };
-    } else if (hour = 24 || (hour > 0 && hour < 6)) {
+    } else if (currentShift == 24 || (currentShift > 0 && currentShift < 6)) {
       if (currentShift == 0)
         currentShift = 24;
       const src = `assets/images/night/${numbersArray[currentShift-1]}.jpg`;
