@@ -1,0 +1,63 @@
+section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.not-only-section {
+  background: url("../../assets/images/start-screen-gradient-background.png") no-repeat;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.about-section {
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-xl;
+  height: 588px;
+}
+
+.our-friends {
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-light-l;
+  height: 877px;
+
+  div {
+    display: flex;
+  }
+}
+
+.help {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-xl;
+  height: 611px;
+
+  div {
+    display: flex;
+  }
+}
+
+.in-addition {
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light-l;
+  height: 464px;
+}
+
+/*PETS PAGE*/
+
+.pets_our-friends {
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-light-l;
+  height: 1342px;
+
+  div{
+    display: flex;
+  }
+}

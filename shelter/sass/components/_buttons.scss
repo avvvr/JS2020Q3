@@ -1,0 +1,79 @@
+.primary-btn {
+  height: 52px;
+
+  background-color: $color-primary;
+
+  font-family: Georgia, Times, serif;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-light;
+  }
+}
+
+.left-not-only div .primary-btn {
+  width: 207px;
+}
+
+.secondary-btn {
+  height: 52px;
+
+  background-color: transparent;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  border-radius: 50px;
+  border: 2px solid $pink;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $color-primary-light;
+    background-color: $color-primary-light;
+  }
+}
+
+.pets_slider-content .secondary-btn{
+  width: 187px;
+}
+
+.slider-part div {
+  height: 82px;
+  justify-content: flex-start;
+}
+
+.our-friends-slider div button {
+  width: 52px;
+}
+
+.our-friends-slider-content div div button {
+  width: 187px;
+
+}
+
+.primary-btn-box button {
+  width: 261px;
+}
+
+.btn-inactive{
+  background-color: transparent;
+  border: 1px solid $color-dark-s;
+  border-radius: 50px;
+}
+
+.pets_btn-block {
+  button {
+    width: 52px;
+    height: 52px;
+  }
+}
